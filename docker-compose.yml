@@ -25,4 +25,4 @@ services:
       ofelia.enabled: "true"
       # SAME AS NEST_PROCESSING_FREQUENCY_HOURS
       ofelia.job-exec.nestwatcher.schedule: "@every 12h"
-      ofelia.job-exec.nestwatcher.command: "bash /usr/src/app/scripts/processNests.sh"
+      ofelia.job-exec.nestwatcher.command: "cd scripts && bash processNests.sh >> /usr/src/app/crontab.out 2>> /usr/src/app/crontab.err"
